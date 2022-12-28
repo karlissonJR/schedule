@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/
+        http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>karlissonj@gmail.com</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>com.karlisson.listener.MysqlConnectionServletContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>main</servlet-name>
+        <servlet-class>com.karlisson.controller.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>subject</servlet-name>
+        <servlet-class>com.karlisson.controller.SubjectServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>day scheduling</servlet-name>
+        <servlet-class>com.karlisson.controller.DaySchedulingServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>scheduling</servlet-name>
+        <servlet-class>com.karlisson.controller.SchedulingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>main</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>subject</servlet-name>
+        <url-pattern>/subject</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>day scheduling</servlet-name>
+        <url-pattern>/day_scheduling</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>scheduling</servlet-name>
+        <url-pattern>/scheduling</url-pattern>
+    </servlet-mapping>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+
+</web-app>
