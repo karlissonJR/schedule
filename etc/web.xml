@@ -12,6 +12,7 @@
 
     <listener>
         <listener-class>com.karlisson.listener.MysqlConnectionServletContextListener</listener-class>
+        <listener-class>com.karlisson.listener.ScheduleSessionCounterListener</listener-class>
     </listener>
 
     <servlet>
